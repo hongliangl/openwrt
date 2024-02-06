@@ -16,6 +16,10 @@ case "$FIRMWARE" in
 		ath11k_patch_mac $(macaddr_add $addr 8) 1
 		ath11k_set_macflag
 		;;
+	alibabacloud,ap8220)
+		caldata_extract "0:art" 0x1000 0x20000
+		ath11k_remove_regdomain
+		;;
 	asus,rt-ax89x)
 		CI_UBIPART="UBI_DEV"
 		caldata_extract_ubi "Factory" 0x1000 0x20000

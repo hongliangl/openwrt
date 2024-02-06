@@ -21,5 +21,8 @@ boot() {
 	netgear,wax630)
 		fw_setenv boot_count 0
 	;;
+	alibabacloud,ap8220)
+		fw_setenv active 1
+	;;
 	esac
 }

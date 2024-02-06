@@ -157,7 +157,8 @@ platform_pre_upgrade() {
 		;;
 	redmi,ax6|\
 	xiaomi,ax3600|\
-	xiaomi,ax9000)
+	xiaomi,ax9000|\
+	alibabacloud,ap8220)
 		xiaomi_initramfs_prepare
 		;;
 	esac
@@ -215,6 +216,11 @@ platform_do_upgrade() {
 		# force altbootcmd which handles partition change in u-boot
 		fw_setenv bootcount 3
 		fw_setenv upgrade_available 1
+		nand_do_upgrade "$1"
+		;;
+	alibabacloud,ap8220)
+		CI_KERN_UBIPART="ubi_kernel"
+		CI_ROOT_UBIPART="rootfs"
 		nand_do_upgrade "$1"
 		;;
 	linksys,homewrk)

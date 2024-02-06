@@ -635,3 +635,18 @@ define Device/zyxel_nwa210ax
 	ZYXEL_MODEL_ID := 5c e1
 endef
 TARGET_DEVICES += zyxel_nwa210ax
+
+define Device/alibabacloud_ap8220
+	$(call Device/FitImage)
+	$(call Device/UbiFit)
+	DEVICE_VENDOR := Alibaba Cloud
+	DEVICE_MODEL := AP8220
+	BLOCKSIZE := 128k
+	PAGESIZE := 2048
+	SOC := ipq8071
+	DEVICE_DTS_CONFIG := config@ac02
+	KERNEL_SIZE = 49152k
+	DEVICE_PACKAGES := ipq-wifi-alibabacloud_ap8220
+endef
+TARGET_DEVICES += alibabacloud_ap8220
+
