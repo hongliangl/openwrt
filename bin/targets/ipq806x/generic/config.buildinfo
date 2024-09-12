@@ -1,0 +1,10 @@
+CONFIG_TARGET_ipq806x=y
+CONFIG_TARGET_ipq806x_generic=y
+CONFIG_TARGET_ipq806x_generic_DEVICE_netgear_r7800=y
+# CONFIG_PACKAGE_ath10k-board-qca9984 is not set
+CONFIG_PACKAGE_ath10k-board-qca99x0=y
+# CONFIG_PACKAGE_ath10k-firmware-qca9984-ct is not set
+CONFIG_PACKAGE_ath10k-firmware-qca99x0-ct=y
+# CONFIG_PACKAGE_kmod-pstore is not set
+# CONFIG_PACKAGE_kmod-ramoops is not set
+# CONFIG_PACKAGE_kmod-reed-solomon is not set
